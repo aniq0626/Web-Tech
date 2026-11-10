@@ -1,0 +1,29 @@
+/* Services: flexible media cards and native HTML disclosure controls. */
+nav a { border-radius: 5px; padding: 8px 12px; }
+nav a[aria-current='page'] { background: #251b32; }
+.services-intro { text-align: center; padding-bottom: 30px; }
+.services-intro > p:last-child { margin-top: 25px; }
+.service-list { display: flex; flex-direction: column; gap: 35px; }
+.service-card { display: flex; align-items: center; flex-wrap: wrap; gap: 42px; padding: 32px; background: #111013; border: 1px solid #28232f; border-radius: 12px; scroll-margin-top: 25px; transition: border-color .3s, transform .3s; }
+.service-card:hover { border-color: #745b94; transform: translateY(-4px); }
+.service-card > img, .video-art { flex: 1 1 300px; width: 42%; min-width: 0; height: 280px; object-fit: cover; border-radius: 7px; }
+.service-card > div:not(.video-art) { flex: 1 1 300px; }
+.service-card h2 { font-size: 32px; }
+.service-card p:not(.eyebrow) { margin-top: 18px; font-size: 16px; }
+.service-card ul { padding-left: 18px; color: #bdb4c7; font-size: 16px; line-height: 2; }
+.service-card li::marker { color: #cfb6ff; }
+.video-art { display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(ellipse,#4c3065,#17111e); gap: 25px; }
+.video-art > span { font-size: 45px; color: #dfc9ff; }
+.video-art small { letter-spacing: .2em; font-size: 16px; }
+.timeline { display: flex; gap: 4px; width: 75%; }
+.timeline i { height: 24px; flex: 1; background: #b999dd; border-radius: 3px; }
+.timeline i:nth-child(even) { flex: 2; background: #684d88; }
+.service-faq { max-width: 850px; }
+.service-faq h2 { margin-bottom: 30px; }
+details { border-bottom: 1px solid #322a3b; padding: 22px 0; }
+summary { cursor: pointer; font-size: 16px; }
+summary::marker { color: #cfb6ff; }
+details p { margin: 18px 0 0 20px; font-size: 16px; }
+@media(max-width:850px) { nav { gap: 6px; } .service-card { gap: 26px; } }
+@media(max-width:520px) { nav a { padding: 7px 8px; } .service-card { padding: 20px; } .service-card > img, .video-art { height: 220px; } }
+

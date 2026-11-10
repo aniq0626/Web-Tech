@@ -1,0 +1,31 @@
+/* Contact: grid layout, flexible field row and native validation. */
+.site-header { border-bottom: 1px solid #29242e; padding-bottom: 20px; }
+nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: 7px; }
+.contact-intro { padding-bottom: 25px; }
+.contact-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 85px; }
+.contact-details > p:not(.eyebrow) { margin: 25px 0 35px; font-size: 16px; max-width: 350px; }
+.contact-details .eyebrow { margin-bottom: 8px; }
+.email-link { color: #cfb6ff; font-size: clamp(18px,1.5vw,22px); overflow-wrap: anywhere; }
+.social-links { display: flex; gap: 28px; margin-top: 25px; font-size: 16px; }
+aside { border-top: 1px solid #312938; margin-top: 50px; padding-top: 25px; }
+aside h3 { font-size: 18px; }
+aside p { font-size: 16px; margin-top: 14px; }
+form { background: #111013; padding: 32px; border: 1px solid #302735; border-radius: 10px; }
+.form-note { font-size: 16px; margin-bottom: 25px; }
+.form-row { display: flex; gap: 18px; }
+.form-row > div { flex: 1; min-width: 0; }
+label { display: block; font-size: 16px; color: #d9d0e1; margin-bottom: 9px; }
+input, select, textarea { display: block; width: 100%; color: #f4edf8; background: #08080a; border: 1px solid #3a303f; padding: 13px; border-radius: 5px; margin-bottom: 22px; font: 16px 'Montserrat',sans-serif; }
+input:focus, select:focus, textarea:focus { outline: 2px solid #cfb6ff; outline-offset: 2px; }
+input::placeholder, textarea::placeholder { color: #817987; }
+input[type='email']:not(:placeholder-shown):invalid { border-color: #ec9aa7; }
+input[type='email']:not(:placeholder-shown):valid { border-color: #96c9b3; }
+textarea { resize: vertical; min-height: 140px; }
+form .button { width: 100%; }
+@media(max-width:900px) { .contact-layout { gap: 35px; } .form-row { flex-direction: column; gap: 0; } }
+@media(max-width:650px) { .contact-layout { grid-template-columns: 1fr; } form { padding: 23px; } }
+
+
+#brief-toggle { margin-top: 28px; }
+#brief-help { margin-top: 20px; padding: 18px; border-left: 3px solid #cfb6ff; }
+[hidden] { display: none !important; }

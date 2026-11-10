@@ -1,0 +1,52 @@
+/* Home: atmospheric hero, selected projects and editorial sections. */
+nav { border: 1px solid #242229; border-radius: 9px; padding: 0 22px; background: #131116c9; }
+.hero { position: relative; isolation: isolate; text-align: center; padding: 130px 6% 0; overflow: hidden; }
+.hero h1 { position: relative; }
+.hero-copy { max-width: 630px; margin: 25px auto 0; font-size: 16px; }
+.actions { display: flex; align-items: center; justify-content: center; gap: 28px; margin-top: 32px; }
+.aura { position: absolute; z-index: -1; width: 570px; height: 400px; left: calc(50% - 285px); top: 0; border: 3px solid #c6a2ff66; border-radius: 43% 57% 62% 38%; background: radial-gradient(ellipse, transparent 46%, #ac75e832 60%, transparent 72%); box-shadow: inset 0 0 60px #9b66da32, 0 0 80px #9462ce24; filter: blur(18px); transform: rotate(-30deg); animation: drift 12s ease-in-out infinite alternate; }
+@keyframes drift { to { transform: translate(50px,15px) rotate(30deg) scale(1.12); border-radius: 60% 40% 30% 70%; } }
+.hero-foot { border-bottom: 1px solid #262329; display: flex; justify-content: space-between; margin: 110px auto 0; padding: 22px 0; font-size: 16px; letter-spacing: .12em; color: #a49caa; max-width: 1180px; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 38px; }
+.work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+.service-preview { display: flex; gap: 35px; margin-top: 45px; }
+.service-preview a { flex: 1; border-top: 1px solid #3b3442; padding-top: 25px; transition: transform .25s; }
+.service-preview a:hover { transform: translateY(-5px); }
+.service-preview span { color: #bca2df; font-size: 16px; }
+.service-preview h3 { margin: 24px 0 16px; }
+.service-preview p { font-size: 16px; }
+.service-preview b { display: block; color: #cfb6ff; margin-top: 20px; }
+.process { border-top: 1px solid #262329; border-bottom: 1px solid #262329; }
+.process ol { display: flex; gap: 28px; padding: 30px 0 0 20px; color: #cfb6ff; }
+.process li { flex: 1; padding-left: 3px; }
+.process h3 { font-size: 16px; color: #fff; margin: 12px 0; }
+.process p { font-size: 16px; }
+.testimonials { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin: 40px 0 25px; }
+.quote { padding: 24px 0; border-top: 1px solid #2c2732; }
+.quote-mark { color: #cfb6ff; font-size: 55px; line-height: 1; }
+blockquote { margin: 12px 0 28px; font-size: 16px; color: #ddd9e2; }
+.quote strong, .quote small { display: block; }
+.quote strong { font-size: 16px; }
+.quote small { color: #8f8996; font-size: 16px; margin-top: 4px; }
+.about-preview { max-width: 780px; text-align: center; }
+.about-preview > p:not(.eyebrow) { margin: 28px auto 20px; max-width: 590px; }
+@media (max-width:850px) { .hero { padding-top: 85px; } .process ol { flex-wrap: wrap; } .process li { flex: 1 1 120px; } .service-preview { gap: 20px; } }
+@media (max-width:600px) { .work-grid, .testimonials { grid-template-columns: 1fr; } .service-preview { flex-direction: column; } .hero-foot { margin-top: 70px; gap: 15px; font-size: 16px; } .hero-foot span { max-width: 160px; } .actions { flex-direction: column; gap: 12px; } .section-heading { align-items: start; flex-direction: column; } }
+.project-image { display: block; position: relative; overflow: hidden; border-radius: 9px; border: 1px solid #302d34; background: #111; }
+.project img { width: 100%; transition: transform .6s; }
+.project-image:hover img { transform: scale(1.035); }
+.view { position: absolute; right: 16px; bottom: 16px; background: #cfb6ff; color: #17101e; padding: 9px 15px; border-radius: 5px; font-size: 16px; opacity: 0; transform: translateY(5px); transition: .25s; }
+.project-image:hover .view, .project-image:focus-visible .view { opacity: 1; transform: none; }
+.project figcaption { display: flex; justify-content: space-between; padding: 20px 0; }
+.project small { font-size: 16px; color: #a49caa; }
+.project h3 { margin-top: 7px; font-size: 19px; }
+@media (hover: none) { .view { opacity: 1; transform: none; } }
+
+/* Continuous CSS orbit and breathing glow; no scripts required. */
+.aura { width: 610px; height: 440px; left: calc(50% - 305px); top: 10px; border: 4px solid #c9a7ff99; filter: blur(10px); background: radial-gradient(ellipse,transparent 43%,#ba7cff40 60%,transparent 73%); animation: orbit-glow 9s ease-in-out infinite alternate; }
+.aura::before, .aura::after { content: ''; position: absolute; inset: 24px; border-radius: 50%; border: 2px solid #c4a1fa88; box-shadow: 0 0 38px #b079f555; animation: ring-turn 15s linear infinite; }
+.aura::after { inset: -25px; border-color: #b785ec55; transform: rotate(45deg); animation-direction: reverse; }
+@keyframes orbit-glow { 0% { transform: translate(-60px,0) rotate(-25deg) scale(.9); opacity: .6; } 50% { transform: translate(35px,30px) rotate(30deg) scale(1.08); opacity: 1; } 100% { transform: translate(-15px,60px) rotate(90deg) scale(.95); opacity: .75; } }
+@keyframes ring-turn { from { transform: rotate(0deg) scaleX(.8); } to { transform: rotate(360deg) scaleX(.8); } }
+@media (max-width:600px) { .aura { width: 390px; height: 340px; left: calc(50% - 195px); } }
+@media (prefers-reduced-motion:reduce) { .aura,.aura::before,.aura::after { animation: none !important; } }

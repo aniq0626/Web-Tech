@@ -1,0 +1,26 @@
+/* Portfolio: responsive CSS Grid with image captions. */
+nav { gap: 30px; }
+nav a[aria-current='page']::after { content: ''; display: block; width: 5px; height: 5px; background: #cfb6ff; border-radius: 50%; margin: 3px auto -8px; }
+.portfolio-intro { padding-bottom: 35px; }
+.portfolio-intro > p:not(.eyebrow) { max-width: 590px; margin: 25px 0 18px; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%, 380px),1fr)); gap: 60px 30px; padding-top: 35px; align-items: start; }
+.gallery .project:nth-child(even) { margin-top: 95px; }
+.gallery .project { animation: arrive .7s ease-out both; }
+@keyframes arrive { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+.gallery .project-image { aspect-ratio: 1.35; }
+.gallery img { width: 100%; height: 100%; object-fit: contain; }
+.portfolio-note { text-align: center; border-top: 1px solid #2d2536; }
+.portfolio-note > span { color: #cfb6ff; font-size: 65px; }
+.portfolio-note p { margin: 24px 0; }
+@media(max-width:850px) { .gallery { gap: 30px 20px; } .gallery .project:nth-child(even) { margin-top: 60px; } }
+@media(max-width:600px) { .gallery { grid-template-columns: 1fr; } .gallery .project:nth-child(even) { margin-top: 0; } nav { gap: 17px; } }
+.project-image { display: block; position: relative; overflow: hidden; border-radius: 9px; border: 1px solid #302d34; background: #111; }
+.project img { width: 100%; transition: transform .6s; }
+.project-image:hover img { transform: scale(1.035); }
+.view { position: absolute; right: 16px; bottom: 16px; background: #cfb6ff; color: #17101e; padding: 9px 15px; border-radius: 5px; font-size: 16px; opacity: 0; transform: translateY(5px); transition: .25s; }
+.project-image:hover .view, .project-image:focus-visible .view { opacity: 1; transform: none; }
+.project figcaption { display: flex; justify-content: space-between; padding: 20px 0; }
+.project small { font-size: 16px; color: #a49caa; }
+.project h3 { margin-top: 7px; font-size: 19px; }
+@media (hover: none) { .view { opacity: 1; transform: none; } }
+

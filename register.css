@@ -1,0 +1,29 @@
+/* Registration: field attributes, combinators and pseudo-classes. */
+nav a[aria-current="page"] { background: #2c1e38; border-radius: 999px; }
+.register-intro { padding-bottom: 35px; }
+.register-intro p { max-width: 850px; margin-top: 28px; }
+form { max-width: 850px; margin: auto; }
+fieldset { border: 1px solid #4c365e; border-radius: 18px; padding: 28px; margin-bottom: 28px; }
+legend { padding: 0 12px; font-size: 23px; color: #cfb6ff; }
+label { display: block; margin: 20px 0 8px; }
+input,textarea,select { font: inherit; color: white; background: #151019; border: 1px solid #5b466c; border-radius: 8px; padding: 12px; width: 100%; }
+input:focus,textarea:focus,select:focus { outline: 2px solid #cfb6ff; outline-offset: 3px; }
+input[required] { border-left-width: 4px; }
+input:read-only { color: #b4a9bf; }
+input:disabled { opacity: .5; cursor: not-allowed; }
+input[type="email"]:not(:placeholder-shown):invalid { border-color: #ed91a7; }
+input[type="email"]:not(:placeholder-shown):valid { border-color: #85cfac; }
+input[type="color"] { width: 90px; height: 55px; padding: 5px; }
+input[type="range"] { accent-color: #cfb6ff; }
+input[type="file"]::file-selector-button { border: none; border-radius: 999px; padding: 10px 16px; background: #cfb6ff; margin-right: 15px; cursor: pointer; }
+input[type="radio"],input[type="checkbox"] { width: auto; accent-color: #cfb6ff; }
+.choice { display: flex; gap: 12px; align-items: center; margin: 16px 0; }
+.choice > label { margin: 0; }
+input:checked + label { color: #cfb6ff; }
+legend::after { content: ' ·'; color: #cfb6ff; }
+textarea { resize: vertical; }
+small { display: block; color: #aaa0b4; font-size: 15px; margin-top: 8px; }
+.demo-result { display: none; padding: 24px; margin-top: 24px; border: 1px solid #85cfac; border-radius: 16px; }
+.demo-result:target { display: block; }
+@media(max-width:700px) { fieldset { padding: 22px; } }
+@media(max-width:450px) { fieldset { padding: 16px; } legend { font-size: 20px; } }

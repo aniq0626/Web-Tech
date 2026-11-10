@@ -1,0 +1,21 @@
+/* Media page: background image, float, clear, positioning and overflow. */
+nav a[aria-current="page"] { border-bottom: 3px solid #cfb6ff; }
+.media-intro { position: relative; padding: 100px 28px; border-radius: 25px; background-image: linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.88)),url('assets/brand-content.png'); background-size: cover; background-position: center; margin-top: 35px; }
+.media-intro p { max-width: 650px; margin-top: 25px; }
+.float-image { float: left; width: 42%; height: auto; margin: 0 30px 20px 0; padding: 8px; border: 1px solid #675078; border-radius: 18px; }
+.media-story p { margin-top: 25px; }
+.clear-float { clear: both; }
+.media-story h3 { margin-top: 32px; }
+.media-story li { margin-bottom: 8px; }
+.media-player video { display: block; width: 100%; max-height: 600px; margin: 24px 0 40px; border: 1px solid #51405f; border-radius: 18px; }
+.media-player audio { display: block; width: min(100%,600px); margin-top: 24px; }
+.media-player p { margin-top: 20px; }
+.table-scroll { overflow-x: auto; margin-top: 28px; }
+table { width: 100%; min-width: 500px; border-collapse: collapse; }
+caption { text-align: left; margin-bottom: 16px; }
+th,td { padding: 18px; border: 1px solid #44334f; text-align: left; }
+th { background: #30203e; }
+tbody tr:nth-child(even) { background: #151019; }
+tbody tr:hover { background: #261b32; }
+@media(max-width:800px) { .float-image { width: 48%; } }
+@media(max-width:550px) { .float-image { float: none; width: 100%; margin: 0 0 25px; } .media-intro { padding: 55px 20px; } }
