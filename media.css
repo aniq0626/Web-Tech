@@ -1,5 +1,5 @@
 /* Media page: background image, float, clear, positioning and overflow. */
-nav a[aria-current="page"] { border-bottom: 3px solid #cfb6ff; }
+
 .media-intro { position: relative; padding: 100px 28px; border-radius: 25px; background-image: linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,.88)),url('assets/brand-content.png'); background-size: cover; background-position: center; margin-top: 35px; }
 .media-intro p { max-width: 650px; margin-top: 25px; }
 .float-image { float: left; width: 42%; height: auto; margin: 0 30px 20px 0; padding: 8px; border: 1px solid #675078; border-radius: 18px; }
@@ -19,3 +19,26 @@ tbody tr:nth-child(even) { background: #151019; }
 tbody tr:hover { background: #261b32; }
 @media(max-width:800px) { .float-image { width: 48%; } }
 @media(max-width:550px) { .float-image { float: none; width: 100%; margin: 0 0 25px; } .media-intro { padding: 55px 20px; } }
+
+/* Media hero typography */
+.media-intro {
+    text-align: center;
+}
+
+.media-intro h1 {
+    max-width: 100%;
+    margin-inline: auto;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.15;
+}
+
+.media-intro h1 em {
+    font-weight: inherit;
+    font-style: normal;
+}
+
+.media-intro p {
+    max-width: 650px;
+    margin-inline: auto;
+}

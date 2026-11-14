@@ -8,7 +8,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 img { display: block; max-width: 100%; }
 h1, h2, h3, p, figure { margin: 0; }
 h1, h2, h3 { line-height: 1.13; letter-spacing: -.045em; }
-h1 { font-size: clamp(42px, 6.2vw, 86px); font-weight: 500; }
+h1 { font-size: clamp(30px, 6.2vw, 86px); font-weight: 500; }
 h2 { font-size: clamp(29px, 3.5vw, 48px); font-weight: 500; }
 h3 { font-size: 22px; font-weight: 600; }
 em { color: #cfb6ff; font-style: normal; }
@@ -95,3 +95,83 @@ main > section { animation: section-enter .8s ease-out both; }
 nav { flex-wrap: wrap; gap: 12px; }
 .site-header { flex-wrap: wrap; }
 nav { order: 3; width: 100%; justify-content: center; }
+
+/* Consistent header across all pages */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.site-header > .logo,
+.site-header > .header-cta {
+    flex-shrink: 0;
+}
+
+.site-header > nav {
+    order: 0;
+    width: auto;
+    min-width: 0;
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+    padding: 6px 16px;
+    background: #131116c9;
+    border: 1px solid #242229;
+    border-radius: 999px;
+}
+
+.site-header > nav a {
+    padding: 10px 4px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #e8e4ec;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+}
+
+.site-header > nav a:hover,
+.site-header > nav a[aria-current="page"] {
+    color: #cfb6ff;
+    border: none;
+    background: transparent;
+}
+
+.site-header > nav a:focus-visible {
+    outline: 2px solid #cfb6ff;
+    outline-offset: 4px;
+    border-radius: 6px;
+}
+
+/* Navigation moves below the logo and button on smaller screens */
+@media (max-width: 1100px) {
+    .site-header {
+        flex-wrap: wrap;
+    }
+
+    .site-header > nav {
+        order: 3;
+        flex-basis: 100%;
+        width: 100%;
+        border-radius: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header > nav {
+        gap: 4px 10px;
+        padding: 10px;
+    }
+
+    .site-header > nav a {
+        font-size: 16px;
+    }
+}
