@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Portfolio: responsive CSS Grid with image captions. */
 
 .portfolio-intro { padding-bottom: 35px; }
@@ -22,4 +23,203 @@
 .project small { font-size: 16px; color: #a49caa; }
 .project h3 { margin-top: 7px; font-size: 19px; }
 @media (hover: none) { .view { opacity: 1; transform: none; } }
+=======
+ 
+/* =========================================
+   PORTFOLIO HERO SECTION
+   Matching the Zanvex Home Page Design
+========================================= */
+>>>>>>> ab0ad11c74ae4da9ad7f686090065890b7e97d9d
 
+.portfolio-intro {
+    position: relative;
+    isolation: isolate;
+    text-align: center;
+    margin-top: 100px;
+    padding: 130px 6% 80px;
+    overflow: visible;
+}
+
+/* Main Hero Heading */
+.portfolio-intro h1 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(38px, 7vw, 78px);
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -0.045em;
+    color: #f7f5fa;
+    margin: 0 auto;
+}
+
+.portfolio-intro h1 em {
+    color: #c9a7ff;
+    font-style: normal;
+    font-weight: 900;
+}
+
+/* Hero Description */
+.portfolio-intro > p:not(.eyebrow) {
+    position: relative;
+    z-index: 1;
+    max-width: 630px;
+    margin: 25px auto 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #a49caa;
+}
+
+/* Behance Link */
+.portfolio-actions {
+    position: relative;
+    z-index: 1;
+    margin-top: 32px;
+}
+
+.portfolio-actions .text-link {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #e5ddef;
+    text-decoration: none;
+    border-bottom: 1px solid #493b56;
+    padding-bottom: 10px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.portfolio-actions .text-link:hover {
+    color: #c9a7ff;
+    border-color: #c9a7ff;
+}
+
+/* Purple Animated Aura */
+.portfolio-intro .aura {
+    position: absolute;
+    z-index: -1;
+    width: 610px;
+    height: 440px;
+    left: calc(50% - 305px);
+    top: 10px;
+    border: 4px solid #c9a7ff99;
+    border-radius: 43% 57% 62% 38%;
+    filter: blur(10px);
+    background: radial-gradient(
+        ellipse,
+        transparent 43%,
+        #ba7cff40 60%,
+        transparent 73%
+    );
+    box-shadow:
+        inset 0 0 60px #9b66da32,
+        0 0 80px #9462ce24;
+    animation: portfolio-orbit-glow 9s ease-in-out infinite alternate;
+}
+
+/* Inner Rotating Ring */
+.portfolio-intro .aura::before,
+.portfolio-intro .aura::after {
+    content: '';
+    position: absolute;
+    inset: 24px;
+    border-radius: 50%;
+    border: 2px solid #c4a1fa88;
+    box-shadow: 0 0 38px #b079f555;
+    animation: portfolio-ring-turn 15s linear infinite;
+}
+
+.portfolio-intro .aura::after {
+    inset: -25px;
+    border-color: #b785ec55;
+    animation-direction: reverse;
+}
+
+/* Aura Animation */
+@keyframes portfolio-orbit-glow {
+    0% {
+        transform: translate(-60px, 0) rotate(-25deg) scale(.9);
+        opacity: .6;
+    }
+
+    50% {
+        transform: translate(35px, 30px) rotate(30deg) scale(1.08);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-15px, 60px) rotate(90deg) scale(.95);
+        opacity: .75;
+    }
+}
+
+@keyframes portfolio-ring-turn {
+    from {
+        transform: rotate(0deg) scaleX(.8);
+    }
+
+    to {
+        transform: rotate(360deg) scaleX(.8);
+    }
+}
+
+/* Tablet Responsive */
+@media (max-width: 850px) {
+    .portfolio-intro {
+        padding-top: 85px;
+    }
+
+    .portfolio-intro .aura {
+        width: 500px;
+        height: 390px;
+        left: calc(50% - 250px);
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .portfolio-intro {
+        margin-top: 25px;
+        padding: 85px 5% 50px;
+    }
+
+    .portfolio-intro h1 {
+        font-size: clamp(32px, 8vw, 46px);
+        line-height: 1.2;
+        letter-spacing: -0.04em;
+    }
+
+    .portfolio-intro > p:not(.eyebrow) {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-top: 20px;
+    }
+
+    .portfolio-intro .aura {
+        width: 390px;
+        height: 340px;
+        left: calc(50% - 195px);
+        top: 10px;
+    }
+
+    .portfolio-actions {
+        margin-top: 28px;
+    }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .portfolio-intro .aura,
+    .portfolio-intro .aura::before,
+    .portfolio-intro .aura::after {
+        animation: none !important;
+    }
+}
+.portfolio-actions .text-link {
+    font-weight: 700;
+    font-size: 16px;
+}
