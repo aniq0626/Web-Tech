@@ -1,6 +1,6 @@
 /* Contact: grid layout, flexible field row and native validation. */
 .site-header { border-bottom: 1px solid #29242e; padding-bottom: 20px; }
-nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: 7px; }
+
 .contact-intro { padding-bottom: 25px; }
 .contact-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 85px; }
 .contact-details > p:not(.eyebrow) { margin: 25px 0 35px; font-size: 16px; max-width: 350px; }

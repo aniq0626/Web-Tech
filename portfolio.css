@@ -1,6 +1,5 @@
 /* Portfolio: responsive CSS Grid with image captions. */
-nav { gap: 30px; }
-nav a[aria-current='page']::after { content: ''; display: block; width: 5px; height: 5px; background: #cfb6ff; border-radius: 50%; margin: 3px auto -8px; }
+
 .portfolio-intro { padding-bottom: 35px; }
 .portfolio-intro > p:not(.eyebrow) { max-width: 590px; margin: 25px 0 18px; }
 .gallery { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%, 380px),1fr)); gap: 60px 30px; padding-top: 35px; align-items: start; }

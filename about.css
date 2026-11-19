@@ -1,7 +1,4 @@
 /* About page navigation */
-nav a[aria-current="page"] {
-    border-bottom: 2px solid #cfb6ff;
-}
 
 /* Centred About hero */
 .about-intro {

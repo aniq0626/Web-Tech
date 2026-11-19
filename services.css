@@ -1,6 +1,4 @@
 /* Services: flexible media cards and native HTML disclosure controls. */
-nav a { border-radius: 5px; padding: 8px 12px; }
-nav a[aria-current='page'] { background: #251b32; }
 .services-intro { text-align: center; padding-bottom: 30px; }
 .services-intro > p:last-child { margin-top: 25px; }
 .service-list { display: flex; flex-direction: column; gap: 35px; }
